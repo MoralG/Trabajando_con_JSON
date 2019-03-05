@@ -10,6 +10,7 @@ with open("marvel.json") as fichero:
 
 lista_heroes = []
 lista_equipos = []
+lista_autores = []
 encontrado = False
 
 #------------------------------- Lista de heroes ---------------------------------
@@ -28,7 +29,19 @@ for dic in doc:
 
         lista_equipos.append(equipo)
 
-#---------------------------------------------------------------------------------
+#-------------------------------- Lista de autores --------------------------------
+
+for dic in doc:
+
+    for autor in dic.get("authors"):
+
+        autor not in lista_autores
+
+        lista_autores.append(autor)
+
+print(lista_autores)
+
+#----------------------------------------------------------------------------------
 
 print("")
 print("-------------------MENU--------------------")
@@ -161,6 +174,8 @@ while opcion != 0:
         print("Opcion 5 elegida (Elige autor y compara los poderes, equipos y compañeros de los heroes que le indiquemos)")
         print("---------------------------------------------------------------------------------")
         print("")
+
+
 
     if opcion < 0 or opcion > 5:
 
