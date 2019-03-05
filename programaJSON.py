@@ -9,12 +9,23 @@ with open("marvel.json") as fichero:
 #--------------------------- Definicion de variables -----------------------------
 
 lista_heroes = []
+lista_equipos = []
 
 #------------------------------- Lista de heroes ---------------------------------
 
 for dic in doc:
 
     lista_heroes.append(dic.get("name"))
+
+#------------------------------- Lista de equipos --------------------------------
+
+for dic in doc:
+
+    for equipo in dic.get("teams"):
+
+        equipo not in lista_equipos
+
+        lista_equipos.append(equipo)
 
 #---------------------------------------------------------------------------------
 
@@ -90,12 +101,37 @@ while opcion != 0:
         print("---------------------------------------------------------------------------------")
         print("")
 
+        equipo = input("Introduce un equipo: ")
+
+        while equipo not in lista_equipos:
+
+            print("")
+            print("-------------------------")
+            print("ERROR, no existe el equipo")
+            print("-------------------------")
+            print("")
+
+            lista_equipos = input("Introduce un equipo: ")
+
+        for dic in doc:
+
+            if equipo in dic.get("teams"):
+                
+                print("----------------------")
+                print(dic.get("name"))
+                print("----------------------")
+
+                for poderes in dic.get("powers"):
+                    
+                    print(poderes)
+
+                print("")
+
+
     if opcion == 4:
 
-        print("---------------------------------------------------------------------------------")
-        print("Opcion 4 elegida (Haz una busqueda recursiva en la descripcion)")
-        print("---------------------------------------------------------------------------------")
-        print("")
+
+
 
     if opcion == 5:
 
