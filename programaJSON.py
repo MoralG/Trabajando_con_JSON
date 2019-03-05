@@ -10,6 +10,7 @@ with open("marvel.json") as fichero:
 
 lista_heroes = []
 lista_equipos = []
+encontrado = False
 
 #------------------------------- Lista de heroes ---------------------------------
 
@@ -130,8 +131,29 @@ while opcion != 0:
 
     if opcion == 4:
 
+        print("---------------------------------------------------------------------------------")
+        print("Opcion 4 elegida (Haz una busqueda recursiva en la descripcion)")
+        print("---------------------------------------------------------------------------------")
+        print("")
 
+        busqueda = input("Introduce una cadena para buscar: ")
 
+        for dic in doc:
+
+            if dic.get("description").count(busqueda) > 0:
+                
+                print("")
+                print("---------------------------------")
+                print("Heroe:",dic.get("name"))
+                print("Descripcion:",dic.get("description"))
+                encontrado = True
+        
+        if encontrado == False:
+
+            print("")
+            print("----------------------------------")
+            print("NO SE HAN ENCONTRADO COINCIDENCIAS")
+            print("----------------------------------")
 
     if opcion == 5:
 
