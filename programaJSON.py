@@ -76,7 +76,7 @@ while opcion != 0:
     if opcion == 2:
 
         print("---------------------------------------------------------------------------------")
-        print("Opcion 2 elegida (Elige un Heroe y te muestra la suma de sus poderes)")
+        print("Opcion 2 elegida (Elige un Heroe y te muestra la cantidad de sus poderes)")
         print("---------------------------------------------------------------------------------")
         print("")
     
@@ -204,6 +204,8 @@ while opcion != 0:
                 print(dic.get("name"))
                 lista_hautor.append(dic.get("name"))
         
+        print("")
+        print("")
         heroe1 = input("Introduce el Heroe 1 a comparar: ")
 
         while heroe1  not in lista_hautor:
